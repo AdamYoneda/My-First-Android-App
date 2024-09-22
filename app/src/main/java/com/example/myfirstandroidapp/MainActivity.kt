@@ -20,15 +20,15 @@ class MainActivity : AppCompatActivity() {
         binding.viewPager2.adapter = adapter
         binding.tabLayout.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener{
             override fun onTabSelected(tab: TabLayout.Tab?) {
-                TODO("Not yet implemented")
+                if (tab != null) {
+                    binding.viewPager2.currentItem = tab.position
+                }
             }
 
             override fun onTabUnselected(tab: TabLayout.Tab?) {
-                TODO("Not yet implemented")
             }
 
             override fun onTabReselected(tab: TabLayout.Tab?) {
-                TODO("Not yet implemented")
             }
 
         })
