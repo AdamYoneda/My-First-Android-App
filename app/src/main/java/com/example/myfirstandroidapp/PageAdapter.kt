@@ -12,6 +12,16 @@ class PageAdapter(fragmentManager: FragmentManager, lifecycle: Lifecycle):
     }
 
     override fun createFragment(position: Int): Fragment {
-        TODO("Not yet implemented")
+        return when(position){
+            0 ->{
+                MainFragment()
+            }
+            1 ->{
+                SecondFragment()
+            }
+            else ->{
+                ThirdFragment()
+            }
+        }
     }
 }
