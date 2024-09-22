@@ -9,11 +9,14 @@ import com.example.myfirstandroidapp.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
     private  lateinit var binding: ActivityMainBinding
+    private  lateinit var adapter: PageAdapter
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         enableEdgeToEdge()
         setContentView(binding.root)
+        adapter = PageAdapter(supportFragmentManager, lifecycle)
+        binding.viewPager2.adapter = adapter
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
