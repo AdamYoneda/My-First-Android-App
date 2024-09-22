@@ -1,4 +1,7 @@
 package com.example.myfirstandroidapp
 
-class PageAdapter {
+import androidx.fragment.app.FragmentManager
+import androidx.lifecycle.Lifecycle
+
+class PageAdapter(fragmentManager: FragmentManager, lifecycle: Lifecycle) {
 }
